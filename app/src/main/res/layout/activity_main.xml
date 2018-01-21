@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import
+            alias="aUser"
+            type="com.sendi.mvvmdemo.bean.User"/>
+
+        <variable
+            name="user"
+            type="aUser"/>
+
+        <variable
+            name="mainActivity"
+            type="com.sendi.mvvmdemo.MainActivity"/>
+
+        <variable
+            name="imgId"
+            type="Integer"/>
+    </data>
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.sendi.mvvmdemo.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@{user.name}"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text='@{user.arg+""}'
+                android:textColor="#000000"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="changeAge"
+                android:onClick="@{mainActivity.onChangeAge}"
+                />
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                image="@{imgId}"
+                />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>
