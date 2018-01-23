@@ -18,6 +18,10 @@
         <variable
             name="imgId"
             type="Integer"/>
+
+        <variable
+            name="myClick"
+            type="com.sendi.mvvmdemo.MyClick"/>
     </data>
 
     <LinearLayout
@@ -53,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="changeAge"
-                android:onClick="@{mainActivity.onChangeAge}"
+                android:onClick="@{myClick.onChangeAge}"
                 />
             <ImageView
                 android:layout_width="60dp"

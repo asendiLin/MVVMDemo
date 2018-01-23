@@ -5,6 +5,7 @@ import android.widget.ImageView;
 
 /**
  * Created by Administrator on 2018/1/21.
+ * 图片加载类
  */
 
 public class ImageUtil {
