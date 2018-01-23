@@ -193,13 +193,13 @@ item布局文件：
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
 <TextView
-    android:id="@+id/first"
+    android:id="@+id/name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@{user.name}"
     />
     <TextView
-        android:id="@+id/last"
+        android:id="@+id/age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@{user.age}"
